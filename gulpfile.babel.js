@@ -32,11 +32,25 @@ function lint(files, options) {
       .pipe($.if(!browserSync.active, $.eslint.failAfterError()));
   };
 }
+const lintOptions = {
+  globals: {
+    "jQuery": true,
+    "$": true
+  },
+  "rules": {
+    "strict": 0
+  }
+};
+
 const testLintOptions = {
   env: {
     mocha: true
   }
 };
+
+
+gulp.task('lint', lint('app/scripts/**/*.js', lintOptions));
+gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
 gulp.task('views', function () {
   return gulp.src('app/*.jade')
@@ -44,9 +58,6 @@ gulp.task('views', function () {
     .pipe(gulp.dest('.tmp'))
     .pipe(reload({stream: true}));
 });
-
-gulp.task('lint', lint('app/scripts/**/*.js'));
-gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
 gulp.task('html', ['views', 'styles'], () => {
   const assets = $.useref.assets({searchPath: ['.tmp', 'app', '.']});
@@ -165,6 +176,14 @@ gulp.task('wiredep', () => {
       ignorePath: /^(\.\.\/)*\.\./
     }))
     .pipe(gulp.dest('app'));
+});
+
+// deploy to github pages. requires gulp-subtree
+// https://github.com/yeoman/generator-gulp-webapp/blob/master/docs/recipes/gh-pages.md
+gulp.task('deploy', ['build'], function () {
+  return gulp.src('dist')
+    .pipe($.subtree())
+    .pipe($.clean());
 });
 
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
