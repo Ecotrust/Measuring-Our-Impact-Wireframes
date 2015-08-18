@@ -4,6 +4,7 @@
 * Install node dependencies for this project: `$ npm install --global yo gulp bower gulp-jade`
 * Run `$ bower install` to install frontend dependencies  
 * `$ gulp serve` to work on it. It will start a server at http://localhost:9000/ and will watch all of the files. Any changes you make will be compiled (from sass/jade...) and your browser will automatically update to reflect the changes.
+* `$ gulp deploy` to push it up to github pages. May bark a bit with warnings but should push ok.
 
 ## TODO
 * Add a few success story call outs. Can use a div.panel.panel-{info,danger,warning,prinary} for variation
