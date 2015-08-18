@@ -1,9 +1,9 @@
 ## Install
-- Install Node and NPM. [Cross platform install how-to](http://blog.nodeknockout.com/post/65463770933/how-to-install-nodejs-and-npm)
-- Once that's working...
-- Install node dependencies for this project: `npm install --global yo gulp bower gulp-jade`
-- Run `bower install` to install frontend dependencies
--`$ gulp serve` to work on it. It will start a server at http://localhost:9000/ and will watch all of the files. Any changes you make will be compiled (from sass/jade...) and your browser will automatically update to reflect the changes.
+* Install Node and NPM. [Cross platform install how-to](http://blog.nodeknockout.com/post/65463770933/how-to-install-nodejs-and-npm)
+* Once that's working...
+* Install node dependencies for this project: `$ npm install --global yo gulp bower gulp-jade`
+* Run `$ bower install` to install frontend dependencies  
+* `$ gulp serve` to work on it. It will start a server at http://localhost:9000/ and will watch all of the files. Any changes you make will be compiled (from sass/jade...) and your browser will automatically update to reflect the changes.
 
 ## TODO
 * Add a few success story call outs. Can use a div.panel.panel-{info,danger,warning,prinary} for variation
