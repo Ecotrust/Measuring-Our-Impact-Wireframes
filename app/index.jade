@@ -1,0 +1,124 @@
+extends layouts/default
+
+block content
+
+
+  section.welcome
+
+    #welcome.carousel.slide
+      .carousel-inner
+        .item.active
+          .container
+            .carousel-caption
+              h1 About this project
+              p.lead: +lipsum(21)
+              a.btn.btn-large.btn-primary(href='#') Learn more
+        .item.item-2
+          .container
+            .carousel-caption
+              h1 Doctor Who School District
+              p.lead: +lipsum(21)
+              a.btn.btn-large.btn-primary(href='#') Learn more
+        .item.item-3
+          .container
+            .carousel-caption
+              h1 One more for good measure.
+              p.lead: +lipsum(21)
+              a.btn.btn-large.btn-primary(href='#') Learn more
+      // Controls
+      a.left.carousel-control(href='#welcome', role='button', data-slide='prev')
+        span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+        span.sr-only Previous
+      a.right.carousel-control(href='#welcome', role='button', data-slide='next')
+        span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+        span.sr-only Next
+
+
+
+
+  .container-fluid
+    .row
+
+      include inc/nav-sidebar.jade
+
+      main.col-sm-9
+
+        section.container-fluid
+          .row
+            h1 Community Economic Development
+            section
+              h2 Local and statewide economic impact.
+              h3 Increase in market opportunities/income generation for local producers, processors, and distributors through sales to school districts.
+              +widget("Percentage of total food budget spent on local and Oregon foods by school districts ")
+              +widget("Total dollar amount of all local and Oregon products (overall and by type) purchased by school districts ")
+              +widget("Number or percentage of school districts that purchase Oregon-grown/locally-grown or processed products ")
+              +widget("Number of producers, processors and distributors supplying local and Oregon products to school districts ")
+              +widget("Number of new jobs created by food producers, processors, or distributors due to farm to school market demand ")
+              +widget("School districts across Oregon utilize a wide range of methods to purchase local/Oregon products: a.) direct from farmers, b.) through a distributor, c.) through growers' cooperatives, d.) using innovative procurement strategies (such as forward contracting), and e.) utilizing USDA foods allocations.")
+            section
+              h2 Social capital built in school districts and the community.
+              h3 Mutually supportive relationships result in access to resources shared between community and school districts.
+              +widget("Availability of funding for school districts to engage the community in farm to school efforts. ")
+              +widget("Coordinated statewide efforts exist to increase parent and caregiver knowledge, attitudes, and behaviors towards purchasing Oregon foods that are promoted in schools.")
+              +widget("Number or percent of school districts that utilize promotional activities related to local foods: a.) in the school environment, b.) in the community.")
+              +widget("Oregon Farm to School and School Garden Network membership includes: a.) participants from all geographic regions of the state, b.) participation by state agencies (Oregon Department of Agriculture, Oregon Department of Education, Oregon State University Extension), c.) representation from diverse stakeholders including but not limited to: non-profit organizations, farms and food producers, school food services administrators, Commodity Commissions, Future Farmers of America, distributors, youth, public health professionals,  educators, people of color, and people of diverse socioeconomic backgrounds.")
+            section
+              h2 State agency support for local and regional foods.
+              h3 State agency programs and procurement policies support local and regional foods.
+                +widget("Funding for Farm to School and/or School Garden Programs and staff within Oregon Department of Agriculture and Oregon Department of Education: a.) established as permanent/recurring in the state budget, b.) provides resources to these agencies to provide technical assistance and support at the school and district level.")
+                +widget("Availability of state funding to districts in the state: a.) for purchasing Oregon-grown and processed food products, b.) for food-based, agriculture-based and edible garden-based educational activities, and c.) established as permanent/recurring in the state budget.")
+
+        section.container-fluid
+          .row
+            h1 Education
+            section
+              h2 Increase food literacy in students in schools
+              h3 Increase in student knowledge about food and its impact on health, community economics, and the environment
+              +widget("Number of school districts offering farm to school educational activities (such as school gardening, farm field trips, Future Farmers of America, cooking, nutrition and food-based lessons). ")
+              +widget("Number or percentage of school districts procuring local foods that accompany these purchases with educational activities. ")
+              +widget("Number or percentage of schools in Oregon that have an edible garden")
+              +widget("Number of counties in Oregon with at least one edible school garden")
+              +widget("Number or percentage of schools in Oregon that have an edible garden that is actively used for educational activities.")
+              +widget("Oregon Harvest for Schools materials: a.) are developed and available for different products including fruits and vegetables, meat, grains, eggs, seafood, beans, and dairy, b.) are downloadable and editable, translated into Spanish, and include space to add producer profiles.")
+              +widget("Number or percentage of school districts making local purchases that are doing some form of promotion of local foods. ")
+            section
+              h2 Education policy and programs support farm to school activities.
+              h3 Education agencies allocate resources to support farm to school programming.
+              +widget("Availability of state funding to districts in the state: a.) for food-based, agriculture-based and edible garden-based educational activities, b.) to link those activities with local purchasing efforts, and c.) established as permanent/recurring in the state budget.")
+              h3 Teachers, child care educators, foodservice workers, students and producers are trained in farm to school nutrition, education and gardening activities.
+              +widget("The number of farm to school stakeholders reached by professional development/trainings")
+
+        section.container-fluid
+          .row
+            h1 Public Health
+            section
+              h2 Students and their families access locally produced, healthy food through schools and preschools.
+              h3 Student access to local, healthy foods in schools and preschools.
+              +widget("Total dollar amount of all local and Oregon products (overall and by type) purchased by school districts.")
+              +widget("Number or percentage of school districts that have farm to school activities in pre-K settings")
+              +widget("Number or percentage of students participating in federal school meal programs (NSLP and NSBP) in districts where farm to school activities are present. ")
+              +widget("Number or percentage of free and reduced-meal eligible students participating in federal school meal programs where farm to school activities are present ")
+              +widget("Number of students reached by the ODE F2S grant program (Data source: Impact of HB 2649 docs)")
+              +widget("Number of students reached by the ODE F2S grant program, broken down by race/ethnicity and socioeconomic status")
+              +widget("Number or percentage of schools in Oregon that have an edible garden")
+              +widget("Number of counties in Oregon with at least one edible school garden ")
+              +widget("Number or percentage of schools that incorporate school garden produce into cafeteria meals. (Data source: USDA census and ODE renewal survey)")
+              +widget("Availability of state funding to districts in the state: a.) for purchasing Oregon-grown and processed food products, b.) for food-based, agriculture-based, and edible garden-based educational activities, and c.) established as permanent/recurring in the state budget.")
+              +widget("Number or percentage of school districts that purchase Oregon-grown/locally-grown or processed products ") te government program and policy environments support local, healthy food access in schools for children.
+
+              h3 State government program and policy environments support local, healthy food access in schools for children.
+              +widget("State agencies provide policies, procedures and technical assistance to support incorporation of food from school gardens into school meals. ")
+              +widget("State agencies are able to identify all edible school gardens and their contact people to disseminate technical assistance. ")
+              +widget("Funding for Farm to School and/or School Garden Programs and staff within Oregon Department of Agriculture (ODA) and Oregon Department of Education (ODE): a.) established as permanent/recurring in the state budget, and b.) provides resources to these agencies to provide technical assistance and support at the school and district level.")
+              +widget("Number or percentage of school districts making local purchases that are doing some form of promotion of local foods. ")
+
+        section.container-fluid
+          .row
+            h1 Environmental Quality
+            section
+              h2 Schools support environmentally friendly practices.
+              h3 School gardens support diverse natural food environments.
+              +widget("Number or percentage of schools that have an edible garden that is actively used for educational activities.")
+
+
+

@@ -1,0 +1,84 @@
+$icon-font-path: '../fonts/';
+
+
+@import "cosmo_variables.scss";
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+@import "cosmo_bootswatch.scss";
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+	padding-top: 70px;
+}
+main {
+	h1 {
+		border-bottom: 20px solid $brand-primary;
+		font-size: 4em;
+		color: $brand-primary;
+		margin-top: 100px;
+		padding: 0 0 8px 0;
+	}
+	h2, h3 {
+		margin-top: 2em;
+	}
+	h2 {
+		border-bottom: 2px solid $brand-primary;
+	}
+}
+.header {
+	label {
+		color: $gray-light;
+		font-weight: normal;
+		padding-right: 5px;
+	}
+}
+.side-nav > div {
+	width: 264px;
+	/*position: fixed;*/
+}
+	.affix {
+	  top: 40px;
+	}
+	.nav > li > a {
+		color: $gray;
+		font-weight: bold;
+	}
+
+
+.welcome {
+	//beat the default margins
+    margin: -27px -15px 0;
+}
+#welcome .carousel-inner {
+	.item {
+		background-color: #333333;
+		height: 400px;
+		background: url('http://lorempixel.com/1300/400/nightlife/3') 50% 50% no-repeat;
+	}
+	.item-2{
+		background-image: url(http://lorempixel.com/1300/400/nature/4);
+	}
+	.item-3{
+		background-image: url(http://lorempixel.com/1300/400/nature/2);
+	}
+}
+.panel {
+	margin-bottom: 100px;
+
+	.panel-body {
+		min-height: 300px;
+	}
+	.map-button > span {
+		margin-right: 4px;
+	}
+}
+

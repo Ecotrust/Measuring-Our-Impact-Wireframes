@@ -1,0 +1,53 @@
+mixin capitalize(string)
+  = string.charAt(0).toUpperCase() + string.slice(1)
+
+mixin lipsum(howmany)
+  - var words = ['consectetur', 'adipiscing', 'elit', 'curabitur', 'vel', 'hendrerit', 'libero', 'eleifend', 'blandit', 'nunc', 'ornare', 'odio', 'ut', 'orci', 'gravida', 'imperdiet', 'nullam', 'purus', 'lacinia', 'a', 'pretium', 'quis', 'congue', 'praesent', 'sagittis', 'laoreet', 'auctor' ]
+  - for (var i = 0; i < howmany; i++) {
+    - var nextWord = words[Math.floor((Math.random()* ( words.length - 1 ) ))]
+    if (i == 0)
+      mixin capitalize(nextWord)
+    else
+      = ' ' + nextWord
+      if i == howmany - 1
+        = '.'
+  - }
+
+- var rand = function (min,max) {
+-    return Math.floor(Math.random()*(max-min+1)+min);
+- }
+
+// var item = items[Math.floor(Math.random()*items.length)];
+
+
+mixin widget(name)
+  // keep the panel footers a little random
+  -var lipsumLength = rand(12,55)
+  div.panel.panel-default
+    header.panel-heading.content-fluid
+      .row
+        .col-sm-10
+          h4= name
+        //-.col-sm-2
+          form.navbar-form
+            select.form-control
+              option 2013
+              option 2014
+              option 2015
+        .col-sm-2
+          // @TODO insert a map
+          button.map-button.pull-right.btn.btn-primary.btn-sm(type='button', aria-label='View By County')
+            span.glyphicon.glyphicon-globe(aria-hidden='true')
+            | Map View
+
+
+    div.panel-body
+      p Panel Content will be here
+    footer.panel-footer
+      a.pull-right.more.reference More info
+      div
+        p
+          | Any sort of context/description stuff would go here
+        p: +lipsum(lipsumLength)
+        p Source name(s) and/or&nbsp;
+          a(href="http://you.are/elle") http://you.are/elles
