@@ -8,12 +8,12 @@
 * `$ gulp deploy` to push it up to github pages. May bark a bit with warnings but should push ok.
 
 ## TODO
-* Add a few success story call outs. Can use a div.panel.panel-{info,danger,warning,prinary} for variation
-* Panel CSS clean up
-* Make 'More Info' toggle work
-* Add a map on Map View toggle?
-* Stub out a few different data vis types and include them at random? Just images or CSS classes.
-* Use gh-pages to stage wireframes?
+* ~~Add a few success story call outs. Can use a div.panel.panel-{info,danger,warning,prinary} for variation~~
+* ~~Panel CSS clean up~~
+* ~~Make 'More Info' toggle work~~
+* ~~Add a map on Map View toggle~~
+* ~~Stub out a few different data vis types and include them at random? Just images or CSS classes.~~
+* ~~Use gh-pages to stage wireframes?~~
 
 ## Notes
 * Widget markup is in /inc/mixins.jade
