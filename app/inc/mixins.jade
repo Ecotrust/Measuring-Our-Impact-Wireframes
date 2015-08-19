@@ -19,10 +19,16 @@ mixin lipsum(howmany)
 
 // var item = items[Math.floor(Math.random()*items.length)];
 
+mixin chartFaker(which)
+  -var charts = ['http://Chartholdr.io/pie/600/400/c=2196F3', 'http://Chartholdr.io/line/600/400/c=2196F3', 'http://Chartholdr.io/bar/600/400/c=2196F3']
+  -var chart = charts[Math.floor(Math.random()*charts.length)]
+  img(src=chart)
 
 mixin widget(name)
   // keep the panel footers a little random
   -var lipsumLength = rand(12,55)
+  -var whichChart = rand(0,2)
+
   div.panel.panel-default
     header.panel-heading.content-fluid
       .row
@@ -44,10 +50,10 @@ mixin widget(name)
     div.panel-body
       div.data
         p Panel Content will be here
+        +chartFaker()
       div.map-panel
         div.map-holder
 
-          //-img(src="images/oregon-school-districts.svg")
 
     footer.panel-footer
       a.pull-right.more.reference(href="#") More info

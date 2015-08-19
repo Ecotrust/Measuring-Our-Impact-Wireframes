@@ -60,15 +60,20 @@ main {
 }
 #welcome .carousel-inner {
 	.item {
-		background-color: #333333;
 		height: 400px;
+		background-color: #333333;
 		background: url('http://lorempixel.com/1300/400/nightlife/3') 50% 50% no-repeat;
+		background-size: cover;
 	}
 	.item-2{
 		background-image: url(http://lorempixel.com/1300/400/nature/4);
 	}
 	.item-3{
 		background-image: url(http://lorempixel.com/1300/400/nature/2);
+	}
+	h1 {
+		font-size: 69px;
+		font-weight: bold;
 	}
 }
 .panel {
