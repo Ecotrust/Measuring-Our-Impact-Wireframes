@@ -27,7 +27,6 @@ mixin chartFaker(which)
 mixin widget(name)
   // keep the panel footers a little random
   -var lipsumLength = rand(12,55)
-  -var whichChart = rand(0,2)
 
   div.panel.panel-default
     header.panel-heading.content-fluid
@@ -63,3 +62,23 @@ mixin widget(name)
         p: +lipsum(lipsumLength)
         p Source name(s) and/or&nbsp;
           a(href="http://you.are/elle") http://you.are/elles
+
+mixin successStory(title)
+  -var lipsumLength = rand(32,155)
+  -var lipsumLengthalt = rand(54,125)
+
+  aside.panel.panel-primary.success-story
+    .panel-heading
+      h3.panel-title Success Story
+    .panel-body
+      .container-fluid
+        .row
+          .col-sm-3
+            if title
+              h2= title
+            else
+              h2 Success Story
+          .col-sm-9
+            p: +lipsum(lipsumLengthalt)
+            p: +lipsum(lipsumLength)
+

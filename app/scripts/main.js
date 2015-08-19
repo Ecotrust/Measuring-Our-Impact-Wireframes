@@ -1,15 +1,3 @@
-$(function () {
-    $('#sidebar').affix({
-          offset: {
-            top: $('main').offset().top + 10
-          }
-    });
-
-    MOI.init();
-
-});
-
-
 var MOI = {
 
     init: function(){
@@ -34,4 +22,15 @@ var MOI = {
             return false;
         });
     }
-}
+};
+
+$(function () {
+    $('#sidebar').affix({
+          offset: {
+            top: $('main').offset().top + 10
+          }
+    });
+
+    MOI.init();
+
+});
