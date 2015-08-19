@@ -35,6 +35,13 @@ main {
 		border-bottom: 2px solid $brand-primary;
 	}
 }
+.panel-body {
+	.btn-group {
+		.btn {
+			border-right: 1px solid #fff;
+		}
+	}
+}
 .header {
 	label {
 		color: $gray-light;
@@ -106,12 +113,12 @@ main {
         /*div.map-holder*/
 
 	.data { display: block; }
-	.map-holder { display: none; }
+	.map-panel { display: none; }
 }
 .panel-show-map {
 
 	.data { display: none; }
-	.map-holder { display: block; }
+	.map-panel { display: block; }
 	#main-map {
 		display: block;
 	}
@@ -123,6 +130,11 @@ main {
 
 #main-map {
 	display: none;
+
+	svg {
+		margin-left: -50px;
+		transform: scale(0.9);
+	}
 }
 
 path:hover {

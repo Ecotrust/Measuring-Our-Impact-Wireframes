@@ -27,6 +27,8 @@ mixin chartFaker(which)
 mixin widget(name)
   // keep the panel footers a little random
   -var lipsumLength = rand(12,55)
+  -var nameLegnth = name.length;
+  -var randomizer = rand(1,4)
 
   div.panel.panel-default
     header.panel-heading.content-fluid
@@ -40,18 +42,28 @@ mixin widget(name)
               option 2014
               option 2015
         .col-sm-2
-          // @TODO insert a map
-          button.map-button.pull-right.btn.btn-primary.btn-sm(type='button', aria-label='View By County')
-            span.glyphicon.glyphicon-globe(aria-hidden='true')
-            | Map View
+          if randomizer > 2
+            button.map-button.pull-right.btn.btn-primary.btn-sm(type='button', aria-label='View By County')
+              span.glyphicon.glyphicon-globe(aria-hidden='true')
+              | Map View
 
 
     div.panel-body
+      if randomizer > 2
+        //-.btn-group.btn-group-sm.pull-right(role='group', aria-label='...')
+        div.btn-group-sm.pull-right
+          button.btn.btn-primary(type='button') 2012
+          button.btn.btn-primary.disabled(type='button') 2014
       div.data
         p Panel Content will be here
         +chartFaker()
-      div.map-panel
-        div.map-holder
+      .map-panel.container-fluid
+        .row
+          .map-holder.col-sm-9
+          .col-sm-3
+            h4 Some header
+            p: +lipsum(43)
+
 
 
     footer.panel-footer

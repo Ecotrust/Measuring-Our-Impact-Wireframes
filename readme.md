@@ -8,6 +8,8 @@
 * `$ gulp deploy` to push it up to github pages. May bark a bit with warnings but should push ok.
 
 ## TODO
+* Still need to work out measures with two data sets like ODE VS USDA
+* * Add toggle for the dataset
 * ~~Add a few success story call outs. Can use a div.panel.panel-{info,danger,warning,prinary} for variation~~
 * ~~Panel CSS clean up~~
 * ~~Make 'More Info' toggle work~~
