@@ -42,7 +42,7 @@ main {
 	}
 }
 .side-nav > div {
-	width: 264px;
+	width: 250px;
 	/*position: fixed;*/
 }
 	.affix {
@@ -80,5 +80,26 @@ main {
 	.map-button > span {
 		margin-right: 4px;
 	}
+      /*div.data*/
+      /*div.map-panel*/
+        /*div.map-holder*/
+
+	.data { display: block; }
+	.map-holder { display: none; }
+}
+.panel-show-map {
+
+	.data { display: none; }
+	.map-holder { display: block; }
+	#main-map {
+		display: block;
+	}
 }
 
+#main-map {
+	display: none;
+}
+
+path:hover {
+	fill: $brand-primary;
+}
