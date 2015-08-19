@@ -1,1 +1,1 @@
-$(function(){$("#sidebar").affix({offset:{top:$("main").offset().top+10}})});
+var MOI={init:function(){MOI.mapToggler(),MOI.footerToggler()},mapToggler:function(){$(".map-button").on("click",function(){$(this).parents(".panel").toggleClass("panel-show-map").find(".map-holder").append($("#main-map"))})},footerToggler:function(){$("a.reference").on("click",function(){return $(this).next("div").slideToggle(),!1})}};$(function(){$("#sidebar").affix({offset:{top:$("main").offset().top+10}}),MOI.init()});
