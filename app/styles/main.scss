@@ -80,6 +80,13 @@ main {
 	.map-button > span {
 		margin-right: 4px;
 	}
+	.panel-footer {
+		min-height: $line-height-computed * 2;
+
+		> div {
+			display: none;
+		}
+	}
       /*div.data*/
       /*div.map-panel*/
         /*div.map-holder*/

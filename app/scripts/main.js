@@ -14,6 +14,7 @@ var MOI = {
 
     init: function(){
         MOI.mapToggler();
+        MOI.footerToggler();
     },
 
     mapToggler: function () {
@@ -24,6 +25,13 @@ var MOI = {
                 .toggleClass('panel-show-map')
                 .find('.map-holder')
                 .append( $('#main-map') );
+        });
+    },
+
+    footerToggler: function() {
+        $('a.reference').on('click', function() {
+            $(this).next('div').slideToggle();
+            return false;
         });
     }
 }
