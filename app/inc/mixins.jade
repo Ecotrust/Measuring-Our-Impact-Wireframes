@@ -20,7 +20,7 @@ mixin lipsum(howmany)
 // var item = items[Math.floor(Math.random()*items.length)];
 
 
-mixin widget(name)
+mixin widget(name, divStyle, graphicType, graphicSource, graphicStyle)
   // keep the panel footers a little random
   -var lipsumLength = rand(12,55)
   div.panel.panel-default
@@ -44,6 +44,11 @@ mixin widget(name)
     div.panel-body
       div.data
         p Panel Content will be here
+        div(style=divStyle)
+          if (graphicType == "iframe")
+            iframe(src= graphicSource style=graphicStyle)
+          else
+            img(src=graphicSource style=graphicStyle)
       div.map-panel
         div.map-holder
 
