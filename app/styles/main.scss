@@ -9,20 +9,19 @@ $icon-font-path: '../fonts/';
 
 @import "cosmo_bootswatch.scss";
 
-@mixin section-label($text, $color) {
-	background-color: $color;
-	/*background-color: $brand-primary;*/
-	/*content: "Priority Outcome";*/
+@mixin section-label($text, $color, $top:53px) {
 	content: $text;
+	background-color: $color;
+	color: #fff;
 	display: inline-block;
 	font-size: 11px;
-	text-transform: uppercase;
-	color: #fff;
-	width: auto;
+	font-weight: normal;
+	left: 0;
 	padding: 2px 5px;
 	position: absolute;
-	top: 53px;
-	left: 0;
+	top: $top;
+	text-transform: uppercase;
+	width: auto;
 }
 
 .browserupgrade {
@@ -45,7 +44,7 @@ main {
 		/* Priority outcomes */
 		> .row > section {
 			&:before {
-				@include section-label("Priority Outcome", $brand-primary);
+				@include section-label("Priority Outcome", lighten($brand-primary, 10));
 			}
 
 			/* Indicators */
@@ -91,13 +90,7 @@ main {
 	}
 
 }
-.panel-body {
-	.btn-group {
-		.btn {
-			border-right: 1px solid #fff;
-		}
-	}
-}
+
 .header {
 	label {
 		color: $gray-light;
@@ -212,13 +205,22 @@ main {
 	}
 }
 .panel {
-	margin-bottom: 100px;
+	margin-bottom: 70px;
+	margin-top: 30px;
 
 	.panel-heading h4 {
 		font-weight: bold;
+		&:before {
+			@include section-label("Core Measure", lighten($brand-primary, 10), -10px);
+		}
 	}
 	.panel-body {
 		min-height: 300px;
+		.btn-group {
+			.btn {
+				border-right: 1px solid #fff;
+			}
+		}
 	}
 	.map-button > span {
 		margin-right: 4px;
