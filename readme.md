@@ -10,6 +10,8 @@
 ## TODO
 * Still need to work out measures with two data sets like ODE VS USDA
 * * Add toggle for the dataset
+* * Label Core Measures, Indicators, Sectors
+* * Some sort of arrow graphic showing the relationship between the above
 * ~~Add a few success story call outs. Can use a div.panel.panel-{info,danger,warning,prinary} for variation~~
 * ~~Panel CSS clean up~~
 * ~~Make 'More Info' toggle work~~
