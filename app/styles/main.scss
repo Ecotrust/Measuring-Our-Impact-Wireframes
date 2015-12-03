@@ -221,7 +221,7 @@ main {
 	.panel-heading h4 {
 		font-weight: bold;
 		&:before {
-			@include section-label("Core Measure", lighten($brand-primary, 10), -10px);
+			@include section-label("Measure", lighten($brand-primary, 10), -10px);
 		}
 	}
 	.panel-body {
