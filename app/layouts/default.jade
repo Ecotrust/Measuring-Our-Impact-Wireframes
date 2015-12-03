@@ -11,6 +11,7 @@ html.no-js(lang='')
     // Place favicon.ico in the root directory
     // build:css styles/vendor.css
     // bower:css
+    link(rel='stylesheet', href='/bower_components/selectize/dist/css/selectize.css')
     // endbower
     // endbuild
     // build:css styles/main.css
@@ -44,6 +45,9 @@ html.no-js(lang='')
     // build:js scripts/vendor.js
     // bower:js
     script(src='/bower_components/jquery/dist/jquery.js')
+    script(src='/bower_components/sifter/sifter.js')
+    script(src='/bower_components/microplugin/src/microplugin.js')
+    script(src='/bower_components/selectize/dist/js/selectize.js')
     // endbower
     // endbuild
     // build:js scripts/plugins.js
@@ -63,5 +67,6 @@ html.no-js(lang='')
     // build:js scripts/main.js
     script(src='scripts/main.js')
     // endbuild
+
 
 

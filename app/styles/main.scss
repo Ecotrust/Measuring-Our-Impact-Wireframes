@@ -95,8 +95,18 @@ main {
 	label {
 		color: $gray-light;
 		font-weight: normal;
+        margin: 0;
+        /*padding: $nav-link-padding;*/
+        padding: 0;
 		padding-right: 5px;
+        position: relative;
+        top: -13px;
 	}
+    .selectize-control {
+        display: inline-block;
+        min-width: 250px;
+        margin-top: 4px;
+    }
 }
 .side-nav > div {
 	width: 250px;

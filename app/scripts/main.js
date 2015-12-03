@@ -3,6 +3,7 @@ var MOI = {
     init: function(){
         MOI.mapToggler();
         MOI.footerToggler();
+        MOI.countySelect();
     },
 
     mapToggler: function () {
@@ -20,6 +21,13 @@ var MOI = {
         $('a.reference').on('click', function() {
             $(this).next('div').slideToggle();
             return false;
+        });
+    },
+
+    countySelect: function() {
+        $('#sd-select').selectize({
+            //sortField: 'text',
+            //closeAfterSelect: true
         });
     }
 };
