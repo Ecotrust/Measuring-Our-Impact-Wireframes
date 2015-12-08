@@ -70,7 +70,7 @@ body {
 		border-bottom: 20px solid $brand-primary;
 		/*font-size: 4em;*/
 		color: $brand-primary;
-		//margin-top: 100px;
+        margin-top: 70px;
 		padding: 0 0 8px 0;
 	}
 	h2 {
@@ -196,24 +196,7 @@ body {
 	//beat the default margins
     margin: -27px -15px 0;
 }
-#welcome .carousel-inner {
-	.item {
-		height: 400px;
-		background-color: #333333;
-		background: url('http://lorempixel.com/1300/400/nightlife/3') 50% 50% no-repeat;
-		background-size: cover;
-	}
-	.item-2{
-		background-image: url(http://lorempixel.com/1300/400/nature/4);
-	}
-	.item-3{
-		background-image: url(http://lorempixel.com/1300/400/nature/2);
-	}
-	h1 {
-		font-size: 69px;
-		font-weight: bold;
-	}
-}
+
 .panel {
 	margin-bottom: 70px;
 	margin-top: 30px;
@@ -271,7 +254,23 @@ path:hover {
 	fill: $brand-primary;
 }
 
-//temp
+p { max-width: 50em; }
+.num-row {
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+.big-num {
+    display: block;
+    font-size: 150px;
+    line-height: 150px;
+    text-align: center;
+}
+span.big-num-footer {
+    display: block;
+    text-align: center;
+}
+
+// Temporary for Hompage Listing Wire
 .page-home img { display: block; margin: 2em auto; }
 .page-home p {
     font-size: 1.3em;
