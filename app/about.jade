@@ -1,0 +1,16 @@
+extends layouts/default
+block variables
+   - var body_class = 'page-about';
+   - var page_title = 'About this project';
+block content
+
+
+  .container-fluid
+    .row
+      .col-sm-8
+        h1 About this project
+        p.lead: +lipsum(71)
+        p: +lipsum(41)
+        p: +lipsum(143)
+
+

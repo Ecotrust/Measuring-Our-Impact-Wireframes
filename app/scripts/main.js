@@ -1,9 +1,11 @@
 var MOI = {
 
-    init: function(){
+    indicatorsPageInit: function(){
         MOI.mapToggler();
         MOI.footerToggler();
         MOI.countySelect();
+
+            MOI.setUpSidebars();
     },
 
     mapToggler: function () {
@@ -29,16 +31,26 @@ var MOI = {
             //sortField: 'text',
             //closeAfterSelect: true
         });
+    },
+
+    setUpSidebars: function() {
+        $('#sidebar').affix({
+              offset: {
+                top: $('main').offset().top + 10
+              }
+        });
+
+        $('body').scrollspy({
+            target: '#side-nav',
+            offset: 150
+        });
     }
 };
 
 $(function () {
-    $('#sidebar').affix({
-          offset: {
-            top: $('main').offset().top + 10
-          }
-    });
 
-    MOI.init();
+    if ( $('body').is('.page-indicators') ) {
+        MOI.indicatorsPageInit();
+    }
 
 });

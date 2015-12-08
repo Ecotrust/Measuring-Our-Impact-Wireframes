@@ -1,0 +1,21 @@
+extends layouts/default
+block variables
+   - var body_class = 'page-recommendations';
+   - var page_title = 'Recommendations';
+
+block content
+
+
+  .container-fluid
+    .row
+      .col-sm-8
+        h1 Recommendations
+        p.lead: +lipsum(71)
+        h2 Economic Development
+        p: +lipsum(91)
+        h2 Education
+        p: +lipsum(143)
+        h2 Public Health
+        p: +lipsum(53)
+        h2 Environmental Quality
+        p: +lipsum(253)

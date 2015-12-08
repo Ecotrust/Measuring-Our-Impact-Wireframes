@@ -2,11 +2,12 @@ include ../inc/mixins.jade
 
 doctype html
 html.no-js(lang='')
+  block variables
   head
     meta(charset='utf-8')
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    title Measuring Our Impact Wireframes
+    title Measuring Our Impact Wireframes: #{page_title}
     link(rel='apple-touch-icon', href='apple-touch-icon.png')
     // Place favicon.ico in the root directory
     // build:css styles/vendor.css
@@ -20,7 +21,7 @@ html.no-js(lang='')
     // build:js scripts/vendor/modernizr.js
     script(src='/bower_components/modernizr/modernizr.js')
     // endbuild
-  body(data-spy='scroll', data-target='#side-nav', data-offset='150')
+  body(class=("#{body_class}" || "page-none"))
     //if lt IE 10
       p.browserupgrade
         | You are using an
