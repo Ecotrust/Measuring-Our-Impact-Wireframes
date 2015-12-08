@@ -35,7 +35,7 @@ body {
 	padding-top: 70px;
 	position: relative;
 }
-main {
+.page-indicators main {
 	/* Indentation for fun and profit */
 	/* Sectors */
 	> .container-fluid {
@@ -273,9 +273,55 @@ path:hover {
 
 //temp
 .page-home img { display: block; margin: 2em auto; }
+.page-home p {
+    font-size: 1.5em;
+    text-align: center;
+    em {
+      color: #888;
+      font-style: normal;
+    }
+}
+.Xhide-measures {
+  position: fixed;
+  top: 3px;
+  right: 3px;
+  z-index: 9999;
+}
 .welcome {
-	h1 { font-size: 24px; }
-	h2 { font-size: 20px; }
-	h3 { font-size: 16px; }
-	li { font-size: 12px; }
+  margin-top: 50px;
+    section {
+      border-right: 1px solid #ddd;
+      &:last-child { border-right: 0 none; }
+    }
+
+	h1 { font-size: 30px; }
+	h2 { font-size: 20px;
+		&:before {
+			@include section-label("Priority Outcome", #777777);
+		}
+	}
+    h3 {
+      font-size: 16px;
+      margin-left: 7px;
+		&:before {
+			@include section-label("Indicator", #999999);
+		}
+	}
+    ol {
+		&:before {
+			@include section-label("Measures", #bbbbbb);
+            left: 21px;
+		}
+    }
+    h2, h3, ol {
+      margin-top: 40px;
+      position: relative;
+      &:before {
+        top: -16px;
+      }
+    }
+      ol:before { top: -22px; }
+	li { font-size: 12px;
+	}
+
 }

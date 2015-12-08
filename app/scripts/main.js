@@ -4,8 +4,7 @@ var MOI = {
         MOI.mapToggler();
         MOI.footerToggler();
         MOI.countySelect();
-
-            MOI.setUpSidebars();
+        MOI.setUpSidebars();
     },
 
     mapToggler: function () {
@@ -51,6 +50,14 @@ $(function () {
 
     if ( $('body').is('.page-indicators') ) {
         MOI.indicatorsPageInit();
+    }
+
+    // temp for homepage listings
+    if ( $('body').is('.page-home') ) {
+        $('.hide-measures').on('click', function(){
+            $('ol').toggle();
+            return false;
+        });
     }
 
 });
